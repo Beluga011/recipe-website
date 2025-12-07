@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLICE & SPICE: FOODS THAT MAKE LIFE NICE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                SLICE & SPICE
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#favorites">Favorites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Slice and spice, make every bite nice!</h1>
+            <p>Explore tasty treats, save your favorites with ease, and cook up delights that are sure to please.</p>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for recipes, ingredients, or cuisine...">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                
+                <div class="quick-search">
+                    <span>Quick Search:</span>
+                    <button class="quick-btn" data-search="chicken">Chicken</button>
+                    <button class="quick-btn" data-search="pasta">Pasta</button>
+                    <button class="quick-btn" data-search="dessert">Dessert</button>
+                    <button class="quick-btn" data-search="vegetarian">Vegetarian</button>
+                    <button class="quick-btn" data-search="beef">Beef</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Recipe Grid Section -->
+        <main>
+            <div class="section-title">
+                <h2 id="recipes">Popular Recipes</h2>
+                <button id="random-btn">
+                    <i class="fas fa-random"></i> Random Recipe
+                </button>
+            </div>
+            
+            <div id="recipe-container" class="recipe-grid">
+                <!-- Recipes will be loaded here -->
+                <div class="spinner"></div>
+            </div>
+            
+            <div class="section-title">
+                <h2 id="categories">Recipe Categories</h2>
+            </div>
+            
+            <div id="category-container" class="recipe-grid">
+                <!-- Categories will be loaded here -->
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 id="favorites">My Favorites</h3>
+                <ul id="favorites-list" class="favorites-list">
+                    <!-- Favorites will be loaded here -->
+                    <li>No favorites yet. Add some recipes!</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Popular Categories</h3>
+                <ul id="category-sidebar" class="category-list">
+                    <!-- Categories for sidebar -->
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Cooking Tips</h3>
+                <p><i class="fas fa-lightbulb" style="color: var(--highlight-green);"></i> Always read the recipe completely before starting.</p>
+                <p><i class="fas fa-lightbulb" style="color: var(--highlight-green);"></i> Prep all ingredients before you begin cooking.</p>
+                <p><i class="fas fa-lightbulb" style="color: var(--highlight-green);"></i> Taste as you cook and adjust seasoning.</p>
+                <p><i class="fas fa-lightbulb" style="color: var(--highlight-green);"></i> Let meat rest before slicing to retain juices.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Recipe Detail Modal -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="modal-header">
+                <h2 id="modal-title">Recipe Title</h2>
+                <div class="modal-tags">
+                    <!-- Tags will be added here -->
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="ingredients-section">
+                    <div class="ingredients-list">
+                        <h3>Ingredients</h3>
+                        <ul id="modal-ingredients">
+                            <!-- Ingredients will be added here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button id="favorite-btn" class="modal-btn favorite-btn">
+                            <i class="far fa-heart"></i> Add to Favorites
+                        </button>
+                        <a id="watch-video" target="_blank" class="modal-btn watch-btn">
+                            <i class="fas fa-play"></i> Watch Video
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <p id="modal-instructions">Loading instructions...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SLICE & SPICE: FOODS THAT MAKE LIFE NICE</h3>
+                    <p>Discover and save delicious recipes from around the world. Cook with confidence using our detailed instructions and tips.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#recipes" style="color: var(--neutral-offwhite); text-decoration: none;">Browse Recipes</a></p>
+                    <p><a href="#categories" style="color: var(--neutral-offwhite); text-decoration: none;">Categories</a></p>
+                    <p><a href="#favorites" style="color: var(--neutral-offwhite); text-decoration: none;">My Favorites</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get weekly recipe inspiration and cooking tips.</p>
+                    <div class="search-box" style="margin-top: 15px;">
+                        <input type="email" id="newsletter-email" placeholder="Your email address">
+                        <button id="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 SLICE & SPICE: FOODS THAT MAKE LIFE NICE. All rights reserved. | Created by GKG.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
