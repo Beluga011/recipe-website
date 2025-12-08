@@ -3,8 +3,7 @@
 ## 📋 Project Overview
 
 Slice & Spice is a beautiful, user-friendly recipe discovery website
-that helps you find, save, and cook delicious meals. No coding knowledge
-required - just open and start cooking!
+that helps you find, save, and cook delicious meals.
 
 ## 🌐 Live Demo
 
